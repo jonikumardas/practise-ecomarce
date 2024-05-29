@@ -1,4 +1,3 @@
-
 import { Link, Outlet } from "react-router-dom";
 
 const Deshboard = () => {
@@ -22,11 +21,28 @@ const Deshboard = () => {
     <div>
       {/* for top manu  */}
       <div className="navbar bg-base-200 shadow-xl">
-        <div className="flex-1">
-          <Link to="/" className="btn btn-ghost text-xl">
-            Home
+        <div className="flex-1 ms-16 lg:ms-0">
+          <Link to="/" className="btn btn-ghost text-2xl">
+            P-ecom
           </Link>
         </div>
+        {/* input button  search bar here  */}
+        <label className="input input-bordered items-center gap-2 hidden lg:flex">
+          <input type="text" className="grow" placeholder="Search" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            className="w-5 h-5 opacity-70"
+          >
+            <path
+              fillRule="evenodd"
+              d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </label>
+
         <div className="flex-none">
           <div className="dropdown dropdown-end">
             <div
@@ -74,10 +90,7 @@ const Deshboard = () => {
       <div className="drawer lg:drawer-open">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col items-start justify-center">
-          <label
-            htmlFor="my-drawer-2"
-            className="btn drawer-button lg:hidden"
-          >
+          <label htmlFor="my-drawer-2" className="btn drawer-button relative left-0 top-[-56px] lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
